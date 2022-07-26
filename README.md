@@ -1,2 +1,2 @@
 # MeteoritosGame
-Unjuego de Meteoritos hecho en Godot para PixelLabs
+Un juego de Meteoritos hecho en Godot para PixelLabs

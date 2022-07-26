@@ -5,7 +5,10 @@ Sírvete de tu disparo principal, rayo secundario y escudo, pero no olvides que 
 ***
 
 ***Engine:*** Godot v3.4.4
+
 ***Lenguaje:*** GDScript
+
 ***Plataforma:*** PC
+
 ***Género:*** Shump
 ***

@@ -5,7 +5,6 @@
 [ext_resource path="res://Juego/Proyectiles/laserRetro_000_canion.ogg" type="AudioStream" id=3]
 
 [node name="Canion" type="Node2D"]
-rotation = 1.5708
 script = ExtResource( 1 )
 proyectil = ExtResource( 2 )
 cadencia_disparo = 0.3

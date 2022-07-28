@@ -21,10 +21,8 @@ func constructor(posicion: Vector2,
 				 velocidad_p: float,
 				 danio_proyectil: int) -> void:
 	position = posicion
-	rotation = direccion
+	rotation = direccion + (PI / 2)
 	velocidad = Vector2(velocidad_p, 0).rotated(direccion)
-	
-	
 
 
 func _on_VisibilityNotifier2D_screen_exited() -> void:

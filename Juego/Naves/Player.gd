@@ -8,7 +8,16 @@ var empuje: Vector2 = Vector2.ZERO
 var direccion_rotacion: int = 0
 
 onready var canion: Canion = $Canion
+onready var laser: RayoLaser = $LaserBeam2D
 
+
+func _unhandled_input(event: InputEvent) -> void:
+	# diapro rayo laser
+	if event.is_action_pressed("disparo_secundario"):
+		laser.set_is_casting(true)
+	
+	if event.is_action_released("disparo_secundario"):
+		laser.set_is_casting(false)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

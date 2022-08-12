@@ -2,8 +2,9 @@ extends RigidBody2D
 class_name Player
 
 # Atributos export
-export(int) var potencia_motor: int = 20
-export(int) var potencia_rotacion: int = 280
+export var potencia_motor: int = 20
+export var potencia_rotacion: int = 280
+export var estela_maxima: int = 150
 
 # Atributos
 var empuje: Vector2 = Vector2.ZERO
@@ -12,16 +13,23 @@ var direccion_rotacion: int = 0
 # Atributos Onready
 onready var canion: Canion = $Canion
 onready var laser: RayoLaser = $LaserBeam2D
+onready var estela: Estela = $EstelaPuntoInicio/Trail2D
 
 
 # Metodos
 func _unhandled_input(event: InputEvent) -> void:
-	# disparo rayo laser
+	# Disparo rayo laser
 	if event.is_action_pressed("disparo_secundario"):
 		laser.set_is_casting(true)
 	
 	if event.is_action_released("disparo_secundario"):
 		laser.set_is_casting(false)
+	
+	# Control estela
+	if event.is_action_pressed("mover_adelante"):
+		estela.set_max_points(estela_maxima)
+	elif event.is_action_pressed("mover_atras"):
+		estela.set_max_points(0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

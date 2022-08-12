@@ -1,18 +1,22 @@
 extends RigidBody2D
 class_name Player
 
+# Atributos export
 export(int) var potencia_motor: int = 20
 export(int) var potencia_rotacion: int = 280
 
+# Atributos
 var empuje: Vector2 = Vector2.ZERO
 var direccion_rotacion: int = 0
 
+# Atributos Onready
 onready var canion: Canion = $Canion
 onready var laser: RayoLaser = $LaserBeam2D
 
 
+# Metodos
 func _unhandled_input(event: InputEvent) -> void:
-	# diapro rayo laser
+	# disparo rayo laser
 	if event.is_action_pressed("disparo_secundario"):
 		laser.set_is_casting(true)
 	

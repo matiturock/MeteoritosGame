@@ -14,6 +14,7 @@ var direccion_rotacion: int = 0
 onready var canion: Canion = $Canion
 onready var laser: RayoLaser = $LaserBeam2D
 onready var estela: Estela = $EstelaPuntoInicio/Trail2D
+onready var motorSFX: Motor = $MotorSFX
 
 
 # Metodos
@@ -28,8 +29,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Control estela
 	if event.is_action_pressed("mover_adelante"):
 		estela.set_max_points(estela_maxima)
+		motorSFX.sonido_on()
 	elif event.is_action_pressed("mover_atras"):
 		estela.set_max_points(0)
+		motorSFX.sonido_off()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

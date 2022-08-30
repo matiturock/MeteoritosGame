@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/engineCircular_002_.ogg-1cee1db97686b9dfb24827830dcfec85.oggstr"
+
+[deps]
+
+source_file="res://Juego/Naves/engineCircular_002_.ogg"
+dest_files=[ "res://.import/engineCircular_002_.ogg-1cee1db97686b9dfb24827830dcfec85.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

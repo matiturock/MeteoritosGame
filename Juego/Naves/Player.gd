@@ -26,12 +26,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_released("disparo_secundario"):
 		laser.set_is_casting(false)
 	
-	# Control estela
+	# Control estela y motorSFX
 	if event.is_action_pressed("mover_adelante"):
 		estela.set_max_points(estela_maxima)
 		motorSFX.sonido_on()
 	elif event.is_action_pressed("mover_atras"):
 		estela.set_max_points(0)
+		motorSFX.sonido_on()
+	
+	if event.is_action_released("mover_adelante") or event.is_action_released("mover_atras"):
 		motorSFX.sonido_off()
 
 # Called when the node enters the scene tree for the first time.

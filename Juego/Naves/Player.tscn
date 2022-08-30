@@ -22,9 +22,7 @@ gravity_scale = 0.0
 linear_damp = 2.0
 angular_damp = 4.0
 script = ExtResource( 2 )
-potencia_motor = null
 potencia_rotacion = 160
-estela_maxima = null
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 8, 0 )

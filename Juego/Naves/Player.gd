@@ -100,6 +100,7 @@ func controlador_estados(nuevo_estado: int) -> void:
 		ESTADO.MUERTO:
 			colisionador.disabled = true
 			canion.set_puede_disparar(false)
+			Eventos.emit_signal("nave_destruida", self.global_position, 3)
 			self.queue_free()
 		_:
 			printerr('Error de estado')
@@ -112,6 +113,10 @@ func esta_input_activo() -> bool:
 		return false
 	
 	return true
+
+
+func destruir() -> void:
+	controlador_estados(ESTADO.MUERTO)
 
 
 # Seniales Internas

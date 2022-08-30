@@ -1,3 +1,3 @@
-BUGS:
+FIXES
 
-no para el sonido SFX del motor cuando se suelta la accion (tecla)
+En la semana 2, la parte de recibir danio, falta aclarar que hay que poner un valor en la variable danio, para que fectivamente se reste los puntos de hitpoint al enemigo

@@ -5,7 +5,7 @@ class_name Canion
 export var proyectil: PackedScene = null
 export var cadencia_disparo: float = 0.6
 export var velocidad_proyectil: int = 100
-export var danio_proyectil: int = 1
+export var danio_proyectil: int = 3
 
 onready var timer_emfriamiento: Timer = $TimerEnfriamiento
 onready var audio_disparoSFX: AudioStreamPlayer2D = $AudioDisparoSFX

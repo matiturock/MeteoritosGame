@@ -1,0 +1,3 @@
+BUGS:
+
+no para el sonido SFX del motor cuando se suelta la accion (tecla)

@@ -11,8 +11,23 @@ onready var timer_emfriamiento: Timer = $TimerEnfriamiento
 onready var audio_disparoSFX: AudioStreamPlayer2D = $AudioDisparoSFX
 onready var esta_enfriado: bool = true
 onready var esta_disparando: bool = false setget set_esta_disparando
+onready var puede_disparar: bool = false setget set_puede_disparar, get_puede_disparar
 
 var puntos_disparo: Array = []
+
+
+# getters and setters
+func set_esta_disparando(disparando: bool) -> void:
+	esta_disparando = disparando
+
+
+func set_puede_disparar(value: bool) -> void:
+	puede_disparar = value
+
+
+func get_puede_disparar() -> bool:
+	return puede_disparar
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,10 +39,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if esta_disparando and esta_enfriado:
 		disparar()
-
-
-func set_esta_disparando(disparando: bool) -> void:
-	esta_disparando = disparando
 
 
 func almacenar_puntos_de_disparo() -> void:

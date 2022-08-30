@@ -18,7 +18,7 @@ func _ready() -> void:
 func sonido_on() -> void:
 	if not playing:
 		play()
-	
+
 	efecto_transicion(volume_db, volumen_original)
 
 
@@ -36,3 +36,4 @@ func efecto_transicion(desde_volumen: float, hasta_volumen: float) -> void:
 		Tween.TRANS_LINEAR,
 		Tween.EASE_OUT_IN
 	)
+	tween_sonido.start()

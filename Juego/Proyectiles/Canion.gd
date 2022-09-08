@@ -21,8 +21,8 @@ func set_esta_disparando(disparando: bool) -> void:
 	esta_disparando = disparando
 
 
-func set_puede_disparar(value: bool) -> void:
-	puede_disparar = value
+func set_puede_disparar(duenio_puede: bool) -> void:
+	puede_disparar = duenio_puede
 
 
 func get_puede_disparar() -> bool:

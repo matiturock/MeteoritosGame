@@ -90,16 +90,15 @@ func player_input() -> void:
 func controlador_estados(nuevo_estado: int) -> void:
 	match nuevo_estado:
 		ESTADO.SPAWN:
-			#colisionador.set_deferred() esta linea, reemplace cambiando la propiedad directamente, probar si anda correcto
-			colisionador.disabled = true
+			colisionador.set_deferred("disabled", true)
 			canion.set_puede_disparar(false)
 		ESTADO.VIVO:
-			colisionador.disabled = false
+			colisionador.set_deferred("disabled", false)
 			canion.set_puede_disparar(true)
 		ESTADO.INVENCIBLE:
-			colisionador.disabled = true
+			colisionador.set_deferred("disabled", true)
 		ESTADO.MUERTO:
-			colisionador.disabled = true
+			colisionador.set_deferred("disabled", true)
 			canion.set_puede_disparar(false)
 			Eventos.emit_signal("nave_destruida", self.global_position, 3)
 			self.queue_free()

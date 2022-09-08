@@ -21,7 +21,7 @@ onready var laser: RayoLaser = $LaserBeam2D
 onready var estela: Estela = $EstelaPuntoInicio/Trail2D
 onready var motorSFX: Motor = $MotorSFX
 onready var colisionador: CollisionShape2D = $CollisionShape2D
-
+onready var impactoSFX: AudioStreamPlayer2D = $ImpactoSFX
 
 # Metodos
 func _unhandled_input(event: InputEvent) -> void:

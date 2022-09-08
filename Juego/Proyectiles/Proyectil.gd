@@ -26,7 +26,7 @@ func constructor(posicion: Vector2,
 
 
 # Metodos custom
-func daniar(otro_cuerpo:CollisionObject2D) -> void:
+func daniar(otro_cuerpo: CollisionObject2D) -> void:
 	if otro_cuerpo.has_method("recibir_danio"):
 		otro_cuerpo.recibir_danio(danio)
 	
@@ -39,10 +39,15 @@ func _on_VisibilityNotifier2D_screen_exited() -> void:
 
 
 func _on_Proyectil_area_entered(area: Area2D) -> void:
-	print(area.name)
-	print(area.owner.name)
 	daniar(area)
 
 
 func _on_Proyectil_body_entered(body: Node) -> void:
 	daniar(body)
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.has_method('recibir_danio'):
+		area.recibir_darnio(danio)
+	
+	queue_free()
